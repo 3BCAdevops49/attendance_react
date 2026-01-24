@@ -29,7 +29,7 @@ function App() {
     }
   };
 
-  const handleFormSubmit = () => {
+   const handleFormSubmit = () => {
     fetchRecords();
     setEditingRecord(null);
   };
