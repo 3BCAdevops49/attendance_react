@@ -9,7 +9,7 @@
 
 **A powerful, intelligent attendance tracking system with risk prediction and automated status monitoring**
 
-[Live Demo](https://attendance-backend-1-0.onrender.com) • [Report Bug](../../issues) • [Request Feature](../../issues)
+[Live Demo](https://attendanceriskpredictor-g6a4e6acekbrakh0.southeastasia-01.azurewebsites.net) • [Report Bug](../../issues) • [Request Feature](../../issues)
 
 </div>
 
@@ -178,7 +178,7 @@ The Attendance Risk Predictor addresses these challenges by:
 ### Backend Integration
 - **Spring Boot API** - RESTful backend service
 - **CORS Enabled** - Cross-origin resource sharing for security
-- **Deployed on Render** - Cloud-hosted backend at `https://attendance-backend-1-0.onrender.com`
+- **Deployed on Render** - Cloud-hosted backend at `https://attendanceriskpredictor-g6a4e6acekbrakh0.southeastasia-01.azurewebsites.net`
 
 ### Development Tools
 - **Create React App** - Zero-configuration setup
@@ -220,12 +220,12 @@ Before you begin, ensure you have the following installed:
 Create a `.env` file in the root directory:
 
 ```env
-REACT_APP_API_URL=https://attendance-backend-1-0.onrender.com
+REACT_APP_API_URL=https://attendanceriskpredictor-g6a4e6acekbrakh0.southeastasia-01.azurewebsites.net
 ```
 
 **Configuration Options:**
 
-- **Production (Render)**: `https://attendance-backend-1-0.onrender.com`
+- **Production (Render)**: `https://attendanceriskpredictor-g6a4e6acekbrakh0.southeastasia-01.azurewebsites.net`
 - **Local Development**: `http://localhost:8080`
 
 **Note:** Make sure your backend server is running and accessible before starting the frontend application.
@@ -345,7 +345,7 @@ The frontend communicates with the Spring Boot backend through RESTful APIs:
 ### Base URL
 
 ```javascript
-Production: https://attendance-backend-1-0.onrender.com
+Production: https://attendanceriskpredictor-g6a4e6acekbrakh0.southeastasia-01.azurewebsites.net
 Development: http://localhost:8080
 ```
 
@@ -499,7 +499,7 @@ attendance-risk-predictor/
 
 3. **Set environment variables** in Netlify dashboard:
    ```
-   REACT_APP_API_URL=https://attendance-backend-1-0.onrender.com
+   REACT_APP_API_URL=https://attendanceriskpredictor-g6a4e6acekbrakh0.southeastasia-01.azurewebsites.net
    ```
 
 ### Deploy to Vercel
@@ -635,7 +635,7 @@ copies or substantial portions of the Software.
 
 **Project Links**:
 - **Repository**: [https://github.com/yourusername/attendance-risk-predictor](https://github.com/yourusername/attendance-risk-predictor)
-- **Live Demo**: [https://attendance-backend-1-0.onrender.com](https://attendance-backend-1-0.onrender.com)
+- **Live Demo**: [https://attendanceriskpredictor-g6a4e6acekbrakh0.southeastasia-01.azurewebsites.net](https://attendanceriskpredictor-g6a4e6acekbrakh0.southeastasia-01.azurewebsites.net)
 - **Backend API**: [Spring Boot Repository](https://github.com/yourusername/attendance-backend)
 
 ---
@@ -676,3 +676,4 @@ copies or substantial portions of the Software.
 [⬆ Back to Top](#-attendance-risk-predictor---react-frontend)
 
 </div>
+
