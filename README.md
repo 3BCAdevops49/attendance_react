@@ -178,7 +178,7 @@ The Attendance Risk Predictor addresses these challenges by:
 ### Backend Integration
 - **Spring Boot API** - RESTful backend service
 - **CORS Enabled** - Cross-origin resource sharing for security
-- **Deployed on Render** - Cloud-hosted backend at `https://attendanceriskpredictor-g6a4e6acekbrakh0.southeastasia-01.azurewebsites.net`
+- **Deployed on Azure App Service** - Cloud-hosted backend at `https://attendanceriskpredictor-g6a4e6acekbrakh0.southeastasia-01.azurewebsites.net`
 
 ### Development Tools
 - **Create React App** - Zero-configuration setup
@@ -225,7 +225,7 @@ REACT_APP_API_URL=https://attendanceriskpredictor-g6a4e6acekbrakh0.southeastasia
 
 **Configuration Options:**
 
-- **Production (Render)**: `https://attendanceriskpredictor-g6a4e6acekbrakh0.southeastasia-01.azurewebsites.net`
+- **Production (Azure)**: `https://attendanceriskpredictor-g6a4e6acekbrakh0.southeastasia-01.azurewebsites.net`
 - **Local Development**: `http://localhost:8080`
 
 **Note:** Make sure your backend server is running and accessible before starting the frontend application.
@@ -379,14 +379,16 @@ Located in `services/attendanceService.js`:
 ```javascript
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8080';
+const DEFAULT_API_HOST = 'https://attendanceriskpredictor-g6a4e6acekbrakh0.southeastasia-01.azurewebsites.net';
+const API_HOST = process.env.REACT_APP_API_URL || DEFAULT_API_HOST;
+const API_BASE_URL = `${API_HOST}/attendance`;
 
 export const getAttendanceAPI = {
-  getAll: () => axios.get(`${API_BASE_URL}/attendance`),
-  getById: (id) => axios.get(`${API_BASE_URL}/attendance/${id}`),
-  create: (data) => axios.post(`${API_BASE_URL}/attendance`, data),
-  update: (id, data) => axios.put(`${API_BASE_URL}/attendance/${id}`, data),
-  delete: (id) => axios.delete(`${API_BASE_URL}/attendance/${id}`)
+   getAll: () => axios.get(API_BASE_URL),
+   getById: (id) => axios.get(`${API_BASE_URL}/${id}`),
+   create: (data) => axios.post(API_BASE_URL, data),
+   update: (id, data) => axios.put(`${API_BASE_URL}/${id}`, data),
+   delete: (id) => axios.delete(`${API_BASE_URL}/${id}`)
 };
 ```
 
