@@ -3,7 +3,7 @@ import { Chart as ChartJS, ArcElement } from "chart.js";
 
 ChartJS.register(ArcElement);
 
-const SmallPieChart = ({ total, attended }) => {
+ const SmallPieChart = ({ total, attended }) => {
   const present = total ? (attended / total) * 100 : 0;
   const absent = 100 - present;
 
