@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/AttendanceTable.css';
+import SmallPieChart from '../SmallPieChart';
 
 function AttendanceTable({ records, onEdit, onDelete }) {
   const getStatusColor = (percentage) => {
@@ -37,7 +38,13 @@ function AttendanceTable({ records, onEdit, onDelete }) {
                 <td>{record.studentName}</td>
                 <td>{record.totalClasses}</td>
                 <td>{record.attendedClasses}</td>
-                <td>{record.percentage?.toFixed(2) || 'N/A'}%</td>
+                <td style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+  {record.percentage?.toFixed(2) || 'N/A'}%
+  <SmallPieChart
+    total={record.totalClasses}
+    attended={record.attendedClasses}
+  />
+</td>
                 <td className={`status ${getStatusColor(record.percentage)}`}>
                   {getStatusLabel(record.percentage)}
                 </td>
